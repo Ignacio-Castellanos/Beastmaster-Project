@@ -1,0 +1,73 @@
+.site-footer{
+  background-color: rgb(41, 40, 40);
+  text-decoration:none;
+  display: flex;
+  height:200px;
+  position: relative;
+  color: antiquewhite;
+}
+
+.container{
+  line-height:34px;
+  width:33%;
+  color:antiquewhite;
+  }
+.contact{
+  line-height:34px;
+  width:33%;
+}
+
+.redes{
+  
+  width:33%;
+  line-height:34px;
+  
+}
+
+.shoptt{
+  margin-left: 56px;
+  
+}
+
+
+
+.social-icons
+{ 
+  list-style:none; 
+}
+
+.social-icons img{
+  border-radius:100%;
+  width: 25px;
+  height:25px;
+  
+}
+
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+
+@media (max-width:767px)
+{
+  .social-icons
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}

@@ -9,17 +9,17 @@
 
 .container{
   line-height:34px;
-  width:33%;
+  width: 34%;
   color:antiquewhite;
   }
+
 .contact{
   line-height:34px;
-  width:33%;
+  width:34%;
 }
 
 .redes{
-  
-  width:33%;
+  width: 30%;
   line-height:34px;
   
 }
@@ -28,8 +28,6 @@
   margin-left: 56px;
   
 }
-
-
 
 .social-icons
 { 
@@ -40,6 +38,25 @@
   border-radius:100%;
   width: 25px;
   height:25px;
+}
+
+.map{
+  width:25%;
+  padding-top: 2%;
+}
+
+.body_container{
+  display: inline-block;
+  position: relative;
+}
+.addcarro{
+  position: absolute;
+  background-color:#f6070f;
+  color:white;
+  width: 50px;
+  height:25px ;
+
+
   
 }
 

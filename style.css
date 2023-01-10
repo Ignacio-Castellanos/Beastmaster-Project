@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+input[type=email] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+    color: black;
+}
+
+input[type=email] {
+    background-color: aqua;
+}
+
+input[type=submit] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: aquamarine;
+}

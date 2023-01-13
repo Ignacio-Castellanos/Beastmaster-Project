@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css">
+  <script src="./cart.js"></script>
+</head>
+<body>
+
+    <div class='content'>
+        <nav>
+          <div class="container">
+            <ul class="navbar-left">
+              <li><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+            </ul> <!--end navbar-left -->
+      
+            <ul class="navbar-right">
+              <li>
+                <a href="#" class="my-cart-icon">
+                  <i class="fa fa-shopping-cart"></i>
+                  Cart 
+                  <span class="badge my-cart-counter">0</span>
+                </a>
+              </li>
+            </ul> <!--end navbar-right -->
+          </div> <!--end container -->
+        </nav>
+      
+        <div class="container my-cart-popup">
+         <div class="shopping-cart">
+            <div class="shopping-cart-header">
+              <div class="shopping-cart-total">
+                <span class="lighter-text">Total:</span>
+                <span class="main-color-text my-cart-total"></span>
+              </div>
+            </div> <!--end shopping-cart-header -->
+      
+            <ul class="shopping-cart-items">
+                No Items yet
+            </ul>
+      
+            <a href="#" class="button my-cart-checkout">Checkout</a>
+          </div> <!--end shopping-cart -->
+        </div> <!--end container -->
+      
+        <div class='products'>
+          <div>
+            <div id='product1' class='my-cart-name product my-cart-id'>Product 1</div>
+            <div><span>R</span><span class='price my-cart-price'>500</span></div>
+            <button class='my-cart-add'>Add to Cart</button>
+          </div>
+         
+          <div>
+            <div id='product2' class='my-cart-name product my-cart-id'>Product 2</div>
+            <div><span>R</span><span class='price my-cart-price'>460</span></div>
+            <button class='my-cart-add'>Add to Cart</button>
+          </div>
+          
+          <div>
+            <div id='product3' class='my-cart-name product my-cart-id'>Product 3</div>
+            <div><span>R</span><span class='price my-cart-price'>212.23</span></div>
+            <button class='my-cart-add'>Add to Cart</button>
+          </div>
+         
+        </div>
+      </div>
+      
+</body>
+
+</html>

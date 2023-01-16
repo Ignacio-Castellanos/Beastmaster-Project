@@ -34,7 +34,6 @@ nav {
   }
 
   nav p {
-    margin-right: 30%;
     color: white;
   }
 
@@ -84,7 +83,12 @@ a {
 
 
 .carrito {
-  width: 2%;
+  width: 7%;
+  margin-left: 88%;
+}
+
+.carrito .enlacecart {
+  text-decoration: none;
 }
 
 .tickettext .text {

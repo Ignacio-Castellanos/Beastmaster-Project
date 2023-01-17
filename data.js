@@ -4,7 +4,8 @@ let listaDiscos = [
         tituloDisco: "Back to black",
         añoLanzamiento: "2006",
         precio: "20€",
-        image: scr = "images/Amy Winehouse.jpg" 
+        image: scr = "images/Amy Winehouse.jpg" ,
+        cantidad: "1",
         },
     {
         nombreArtista: "Joaquin Sabina",
@@ -12,6 +13,7 @@ let listaDiscos = [
         añoLanzamiento: "1999",
         precio: "15€",
         image: scr = "images/Joaquin Sabina.jpg",
+        cantidad: "1",
         },
     {
         nombreArtista: "Kiss",
@@ -19,6 +21,7 @@ let listaDiscos = [
         añoLanzamiento: "1979",
         precio: "17€",
         image: scr = "images/dynasty-kiss.jpg",
+        cantidad: "1",
         },
     {
         nombreArtista: "Oasis",
@@ -26,6 +29,7 @@ let listaDiscos = [
         añoLanzamiento: "1995",
         precio: "18€",
         image: scr = "images/oasis.jpg",
+        cantidad: "1",
         },
     {
         nombreArtista: "Queen",
@@ -33,6 +37,7 @@ let listaDiscos = [
         añoLanzamiento: "1981",
         precio: "20€",
         image: scr = "images/queen.jpg",
+        cantidad: "1",
         },           
     {
         nombreArtista: "ACDC",
@@ -40,6 +45,7 @@ let listaDiscos = [
         añoLanzamiento: "1981",
         precio: "20€",
         image: scr = "images/acdc.jpg",
+        cantidad: "1",
         },
     ];
 

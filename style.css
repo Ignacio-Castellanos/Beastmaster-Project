@@ -220,32 +220,6 @@ a {
   padding-left: 3%;
 }
 
-@media (max-width:991px)
-{
-  .site-footer [class^=col-]
-  {
-    margin-bottom:30px
-  }
+#total{
+  
 }
-@media (max-width:767px)
-{
-  .site-footer
-  {
-    padding-bottom:0
-  }
-  .site-footer,.site-footer .social-icons
-  {
-    text-align:center
-  }
-}
-
-@media (max-width:767px)
-{
-  .social-icons
-  {
-    display:block;
-    margin-right:0;
-    font-weight:600
-  }
-}
-

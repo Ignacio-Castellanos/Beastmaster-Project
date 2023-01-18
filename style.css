@@ -1,27 +1,250 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-input[type=email] {
-    width: 50%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border-radius: 10px;
-    background-color: cornflowerblue;
-    color: black;
-}
-
-input[type=email] {
-    background-color: aqua;
-}
-
-input[type=submit] {
-    width: 20%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border-radius: 10px;
-    background-color: aquamarine;
-}
+*{
+    margin:0;
+    padding:0;
+  }
+  
+  .site-footer{
+    background-color: rgb(7, 6, 6);
+    text-decoration:none;
+    display: flex;
+    height:200px;
+    position: relative;
+    color: antiquewhite;
+  }
+  #carrito{
+    background-color: rgb(117, 117, 230);
+  }
+  .container{
+    line-height:34px;
+    width: 34%;
+    color:antiquewhite;
+    }
+  
+  .contact{
+    line-height:34px;
+    width:34%;
+  }
+  
+  .redes{
+    width: 30%;
+    line-height:34px;
+    
+  }
+  
+  .shoptt{
+    margin-left: 56px;
+    
+  }
+  
+  .social-icons
+  { 
+    list-style:none; 
+  }
+  
+  .social-icons img{
+    border-radius:100%;
+    width: 25px;
+    height:25px;
+  }
+  
+  .map{
+    width:25%;
+    padding-top: 2%;
+  }
+  
+  .body_container{
+    display: inline-block;
+    position: relative;
+  }
+  .addcarro{
+    position: absolute;
+    background-color:#f6070f;
+    color:white;
+    width: 50px;
+    height:25px ;
+  
+  }
+  
+  body {
+    padding: 0 0;
+    margin: 0 0;
+  }
+  
+  .headimg {
+      width: 100%;
+      padding-right: 0%;
+      display: flex;
+      position: relative;
+  }
+  
+  nav {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: black;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      padding-left: "2%";
+      margin-left: 2%;
+      color: white;
+      
+    }
+  
+    nav ul li {
+      margin: 0 10px;
+  
+    }
+  
+    nav p {
+      margin-right: 30%;
+      color: white;
+    }
+  
+    nav input {
+      margin-right: 5%;
+    }
+  
+    nav ul li:hover, nav p:hover {
+      color: red;
+    }
+  
+  nav ul #lang {
+      background-color: black;
+      color: white;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 16px;
+      border: none;
+  }
+  
+  #lang:hover {
+      color: red;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .bannertop {
+    width: 100%;
+  }
+  
+  .sale {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:white;
+  }
+  
+  .sale .ticketing {
+      color: black;
+      font-size: 25px;
+      border: solid;
+      border-radius: 10px;
+  }
+  
+  .carrito-logo {
+    width: 2%;
+    
+  }
+  
+  .tickettext .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    padding-top: 3%;
+  }
+  
+  .tickettext .text2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+  }
+  
+  #p2 {
+    padding-bottom: 5%;
+  }
+  
+  .container2 {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+  }
+  
+  .col {
+    flex: 1;
+  }
+  
+  #off {
+    width: 25%;
+  }
+  
+  #scrs {
+    width: 30%;
+  }
+  
+  #gst {
+    width: 30%;
+  }
+  
+  #lc {
+    width: 25%;
+  }
+  
+  #tf3 {
+    width: 35%;
+    padding-top: 8%;
+  }
+  
+  #cft {
+    width: 55%;
+  }
+  
+  .col {
+    margin-left: 5%;
+    padding-top: 5%;
+  }
+  
+  .container h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3%;
+  }
+  
+  @media (max-width:991px)
+  {
+    .site-footer [class^=col-]
+    {
+      margin-bottom:30px
+    }
+  }
+  @media (max-width:767px)
+  {
+    .site-footer
+    {
+      padding-bottom:0
+    }
+    .site-footer,.site-footer .social-icons
+    {
+      text-align:center
+    }
+  }
+  
+  @media (max-width:767px)
+  {
+    .social-icons
+    {
+      display:block;
+      margin-right:0;
+      font-weight:600
+    }
+  }

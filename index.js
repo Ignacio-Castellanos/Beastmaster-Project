@@ -15,7 +15,7 @@ function printProduct() {
                 <p class="card-text">${producto.tituloDisco}</p>
                 <p class="card-text">${producto.añoLanzamiento}</p>
                 <p class="card-text">${producto.precio}</p>
-                <button id="comprar" data-id="${producto.nombreArtista}" class="btn btn-primary">Añadir al carrito</button>
+                <button id="comprar" data-id="${producto.id}" class="btn btn-primary">Añadir al carrito</button>
             </div>            
     </div>
     </div>
@@ -27,73 +27,101 @@ printProduct();
 
 function addcarrito(event) {
     let idArt = event.target.dataset.id;
-    let addDisc = listaDiscos.map(disc => disc.nombreArtista).indexOf(idArt);
-    carrito.push(listaDiscos[addDisc]);
-    dibujarCarrito();
+    // let addDisc = listaDiscos.map(disc => disc.nombreArtista).indexOf(idArt);
+    let existe = listaDiscos.find(Object => Object.id == idArt);
+    if (carrito.includes(existe)) {
+        existe.cantidad++;
+    }
+
+    else {
+        carrito.push(existe);
+    }
     let carrito2 = JSON.stringify(carrito);
     localStorage.setItem("carritoFinal", carrito2);
+    dibujarCarrito();
+    sumCart(carrito);
     location.reload();
+
+    
 }
+
+//carrito.push(listaDiscos[addDisc]);
+// //dibujarCarrito(idArt);
+
+//location.reload();
+//console.info(carrito);
+
+
 
 let botonadd = document.querySelectorAll('#comprar');
 botonadd.forEach(boton => boton.addEventListener("click", addcarrito));
 
-function dibujarCarrito(event) {
-    
-    let existe = carrito.find(disc => disc.nombreArtista === repe);
 
-    if (existe == -1) {
-        carrito.forEach((producto) => {
-            let container2 = document.createElement("div");
-            container2.innerHTML = `
+
+function dibujarCarrito() {
+    carrito_pagina.innerHTML = '';
+    carrito.forEach((producto) => {
+        let container2 = document.createElement("div"); 
+        container2.innerHTML = `
                 <div>
                     <h5>${producto.nombreArtista}</h5>
                     <h5>${producto.tituloDisco}</h5>                    
                     <h5>${producto.precio}</h5>
                     <h5>${producto.cantidad}</h5>
-                    <button id="botonBorrarProducto" data-id="${producto.nombreArtista}">Borrar</button>
-                </div>                
+                    <button id="borrarProducto" data-id="${producto.id}">Borrar</button>
+                </div>               
         `;
-            carrito_pagina.append(container2);
-        });
-    }else {
-            carrito[existe].cantidad += 1;
-        }
-    }
 
-    dibujarCarrito();
+        carrito_pagina.appendChild(container2);
+    });
+
+
+
+let botonBorrar = document.querySelectorAll("#borrarProducto");
+botonBorrar.forEach(x => x.addEventListener("click", eliminarProducto));
+
+
+}
+
+
+function sumCart(carrito) {
+
+    let total = 0;
+    for (let i = 0; i < carrito.length; i++) {
+        total += parseFloat(carrito[i].precio) * parseFloat(carrito[i].cantidad);
+    }
+    return total + "€";
+    
+}
+
+sumCart(carrito);
+document.getElementById("total").innerHTML = sumCart(carrito);
+
+
+
+
+
+
+function eliminarProducto(event) {
+    //console.info(event);
+    const nombre = event.target.dataset.id;
+    carrito = carrito.filter(disc => disc.id != nombre);
+    localStorage.setItem("carritoFinal", JSON.stringify(carrito));
+    dibujarCarrito(carrito);
     
 
-        function sumCart(carrito) {
-            const euro = "€"
-            let total = 0;
-            for (let i = 0; i < carrito.length; i++) {
-                total += parseFloat(carrito[i].precio);
-            }
-            return total + "€";
-
-        }
-        sumCart(carrito);
-
-        document.getElementById("total").innerHTML = sumCart(carrito);
-        console.info(sumCart(carrito));
+}
 
 
-        function eliminarProducto(event) {
-            const nombre = event.target.dataset.id;
-            carrito = carrito.filter(disc => disc.nombreArtista !== nombre);
-            localStorage.setItem("carritoFinal", JSON.stringify(carrito));
-            location.reload();
-        }
-        const botonBorrar = document.querySelectorAll('#botonBorrarProducto');
-        botonBorrar.forEach(boton => boton.addEventListener("click", eliminarProducto));
 
-        const eliminarTodo = () => {
-            localStorage.clear();
-            location.reload();
-        }
+function eliminarTodo() {
+    localStorage.clear();
+    location.reload();
+    // carrito = [];
+    // console.info(carrito);
+}
 
-
+dibujarCarrito();
 // function actualizarCarrito(event) {
 //     const repe = event.target.dataset.id;
 //     let existe = carrito.find(disc => disc.nombreArtista === repe);
@@ -108,4 +136,5 @@ function dibujarCarrito(event) {
 // localStorage.setItem(carrito, JSON.stringify(carrito));
 // const botonComprar = document.querySelectorAll('#comprar');
 // botonComprar.forEach(boton => boton.addEventListener("click", actualizarCarrito));
+
 
